@@ -157,7 +157,7 @@ void binaryToXML(char* inputFile, char* outputfile){//reads binary file and writ
 	doc = xmlNewDoc(BAD_CAST "1.0");
 	char fOut[25];
 	strcpy(fOut,outputfile);
-	char* root = strtok(outputfile, ".");//makes the root name of the output file
+	char* root = "records";//makes the root name of the output file
 	root_node = xmlNewNode(NULL, BAD_CAST root);
 	xmlDocSetRootElement(doc, root_node);
 	char buff[250];//number of the rows
